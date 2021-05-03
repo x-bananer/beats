@@ -418,7 +418,7 @@ img {
   margin-bottom: 39px;
 }
 .hero:after {
-  content: url("/images/rectangle.png");
+  content: url("./images/rectangle.png");
   position: absolute;
   bottom: -27px;
   right: 300px;
@@ -430,7 +430,7 @@ img {
   justify-content: space-between;
   height: 100%;
   padding: 24px 0 61px;
-  background: url("/images/headphones.png") right 13% center/50% auto no-repeat;
+  background: url("./images/headphones.png") right 13% center/50% auto no-repeat;
 }
 
 .hero__title-section {
@@ -590,7 +590,7 @@ img {
   position: relative;
 }
 .benefits__item:before {
-  content: url("/images/separator.png");
+  content: url("./images/separator.png");
   position: absolute;
   top: 30px;
   right: 0;
@@ -649,7 +649,7 @@ img {
   position: relative;
 }
 .benefits-section:before {
-  content: url("/images/triangle.png");
+  content: url("./images/triangle.png");
   position: absolute;
   bottom: 15px;
   left: 230px;
@@ -659,7 +659,7 @@ img {
   position: relative;
 }
 .reviews-section:before {
-  content: url("/images/ellipse.png");
+  content: url("./images/ellipse.png");
   position: absolute;
   bottom: -20px;
   left: 230px;
@@ -771,7 +771,7 @@ img {
 }
 
 .order-section {
-  background: #181818 url("/images/order-section.png") center top 70% no-repeat;
+  background: #181818 url("./images/order-section.png") center top 70% no-repeat;
 }
 
 .order-section__title {
@@ -859,7 +859,7 @@ img {
   border-radius: 4px;
 }
 .radio--checkbox .radio__visible:before {
-  background: url("/images/check.png") center center no-repeat;
+  background: url("./images/check.png") center center no-repeat;
 }
 
 .radio__elem {
