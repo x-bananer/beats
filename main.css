@@ -413,14 +413,12 @@ img {
 
 .hero {
   background-color: #F5F5F5;
-  height: 100vh;
-  min-height: 650px;
   color: #292929;
   position: relative;
   margin-bottom: 39px;
 }
 .hero:after {
-  content: url("./images/rectangle.png");
+  content: url("/images/rectangle.png");
   position: absolute;
   bottom: -27px;
   right: 300px;
@@ -432,7 +430,7 @@ img {
   justify-content: space-between;
   height: 100%;
   padding: 24px 0 61px;
-  background: url("./images/headphones.png") right 13% center/50% auto no-repeat;
+  background: url("/images/headphones.png") right 13% center/50% auto no-repeat;
 }
 
 .hero__title-section {
@@ -553,7 +551,7 @@ img {
 
 .section {
   height: 100vh;
-  min-height: 650;
+  min-height: 600px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -592,7 +590,7 @@ img {
   position: relative;
 }
 .benefits__item:before {
-  content: url("./images/separator.png");
+  content: url("/images/separator.png");
   position: absolute;
   top: 30px;
   right: 0;
@@ -651,7 +649,7 @@ img {
   position: relative;
 }
 .benefits-section:before {
-  content: url("./images/triangle.png");
+  content: url("/images/triangle.png");
   position: absolute;
   bottom: 15px;
   left: 230px;
@@ -661,13 +659,13 @@ img {
   position: relative;
 }
 .reviews-section:before {
-  content: url("./images/ellipse.png");
+  content: url("/images/ellipse.png");
   position: absolute;
   bottom: -20px;
   left: 230px;
 }
 
-.reviews-title__section {
+.reviews-section__title {
   margin-bottom: 30px;
 }
 
@@ -773,7 +771,7 @@ img {
 }
 
 .order-section {
-  background: #181818 url("./images/order-section.png") center top 70% no-repeat;
+  background: #181818 url("/images/order-section.png") center top 70% no-repeat;
 }
 
 .order-section__title {
@@ -861,14 +859,22 @@ img {
   border-radius: 4px;
 }
 .radio--checkbox .radio__visible:before {
-  background: url("./images/check.png") center center no-repeat;
+  background: url("/images/check.png") center center no-repeat;
 }
 
 .radio__elem {
-  display: none;
+  position: absolute;
 }
 .radio__elem:checked ~ .radio__visible::before {
   display: block;
+}
+
+.radio__display {
+  outline: none;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }
 
 .radio__visible {
@@ -892,6 +898,10 @@ img {
   transform: translate(-50%, -50%);
 }
 
+.radio__display:focus ~ .radio__visible {
+  box-shadow: 0px 0px 10px 3px #d92121;
+}
+
 .radio__title {
   color: #fff;
 }
@@ -908,6 +918,10 @@ img {
 }
 .fixed-menu__item--active .fixed-menu__link {
   border-color: #E01F3D;
+}
+
+.fixed-menu__item--active .fixed-menu__link:before {
+  background: #E01F3D;
 }
 
 .fixed-menu__link {
