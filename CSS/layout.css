@@ -1,0 +1,113 @@
+html {
+  font-size: 16px;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Play", "Alegreya Sans", Arial, Helvetica, sans-serif;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+.wrapper {
+  position: relative;
+  min-width: 0px;
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 990px;
+  width: auto;
+  margin: 0 auto;
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+@media screen and (max-with: 992px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    max-width: 700px;
+  }
+}
+@media screen and (max-with: 768px) {
+  html {
+    font-size: 13px;
+  }
+
+  .container {
+    max-width: 450px;
+  }
+}
+@media screen and (max-with: 480px) {
+  html {
+    font-size: 12px;
+  }
+
+  .container {
+    max-width: 300px;
+  }
+}
+@media (max-with: 480px) {
+  html {
+    font-size: 11px;
+  }
+
+  .container {
+    max-width: 250px;
+  }
+}
