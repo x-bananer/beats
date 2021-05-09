@@ -432,7 +432,7 @@ img {
   margin-bottom: 2.4375rem;
 }
 .hero:after {
-  content: url("/images/rectangle.png");
+  content: url("../images/rectangle.png");
   position: absolute;
   bottom: -1.3125rem;
   right: 8.75rem;
@@ -450,7 +450,7 @@ img {
   justify-content: space-between;
   height: 100%;
   padding: 1.5rem 0 3.8125rem;
-  background: url("/images/headphones.png") right 13% center/50% auto no-repeat;
+  background: url("../images/headphones.png") right 13% center/50% auto no-repeat;
 }
 @media screen and (max-width: 768px) {
   .hero__container {
@@ -472,7 +472,7 @@ img {
     text-align: center;
   }
   .hero__title-section:before {
-    content: url("/images/headphones-tablets.png");
+    content: url("../images/headphones-tablets.png");
     margin-bottom: 60px;
   }
 }
@@ -721,7 +721,7 @@ img {
   }
 }
 .benefits__item:before {
-  content: url("/images/separator.png");
+  content: url("../images/separator.png");
   position: absolute;
   top: 1.875rem;
   right: 0;
@@ -819,7 +819,7 @@ img {
   position: relative;
 }
 .benefits-section:before {
-  content: url("/images/triangle.png");
+  content: url("../images/triangle.png");
   position: absolute;
   bottom: -3.0625rem;
   left: 10.375rem;
@@ -841,7 +841,7 @@ img {
   position: relative;
 }
 .reviews-section:before {
-  content: url("/images/ellipse.png");
+  content: url("../images/ellipse.png");
   position: absolute;
   bottom: -1.25rem;
   left: 14.385rem;
@@ -972,7 +972,7 @@ img {
 }
 
 .order-section {
-  background: #181818 url("/images/order-section.png") center top 70% no-repeat;
+  background: #181818 url("../images/order-section.png") center top 70% no-repeat;
 }
 
 .order-section__title {
@@ -1118,7 +1118,7 @@ img {
   border-radius: 4px;
 }
 .radio--checkbox .radio__visible:before {
-  background: url("/images/check.png") center center no-repeat;
+  background: url("../images/check.png") center center no-repeat;
 }
 
 .radio__elem {
@@ -1275,7 +1275,7 @@ img {
 }
 
 .map-section {
-  background: url("/images/map.png") bottom no-repeat;
+  background: url("../images/map.png") bottom no-repeat;
 }
 
 .social__icon {
