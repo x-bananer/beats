@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Beats</title>
-    <link rel="stylesheet" href="CSS/main.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -51,6 +51,8 @@
                             <span class="hamburger__plank"></span>
                             <span class="hamburger__plank"></span>
                             <span class="hamburger__plank"></span>
+                        </a>
+                        <a href="#" class="menu__close">
                         </a>
                     </header>
                     <div class="hero__title-section">
@@ -143,6 +145,74 @@
                     </ul>
                 </div>
             </section>
+            <section class="section slider-section">
+                <div class="container">
+                    <div class="slider">
+                        <div class="slider__display">
+                            <div class="slider__avatar">
+                                <img src="./images/slider-white-phones.png" alt="white-phones" class="slider__avatar-img">
+                            </div>
+                            <article class="slider__content">
+                                <div class="dropdown">
+                                    <img src="./images/gear.png" alt="" class="dropdown__img">
+                                    <div class="dropdown__menu">
+                                        <ul class="dropdown__list">
+                                            <li class="dropdown__item qualities">
+                                                <img src="./images/bluetooth.png" alt="" class="qualities__img">
+                                                <div class="qualities__text">Bluetooth</div>
+                                                <div class="qualities__desc">4.0</div>
+                                            </li>
+                                            <li class="dropdown__item qualities">
+                                                <img src="./images/bluetooth.png" alt="" class="qualities__img">
+                                                <div class="qualities__text">Bluetooth</div>
+                                                <div class="qualities__desc">4.0</div>
+                                            </li>
+                                            <li class="dropdown__item qualities">
+                                                <img src="./images/bluetooth.png" alt="" class="qualities__img">
+                                                <div class="qualities__text">Bluetooth</div>
+                                                <div class="qualities__desc">4.0</div>
+                                            </li>
+                                            <li class="dropdown__item qualities">
+                                                <img src="./images/bluetooth.png" alt="" class="qualities__img">
+                                                <div class="qualities__text">Bluetooth</div>
+                                                <div class="qualities__desc">4.0</div>
+                                            </li>
+                                            <li class="dropdown__item qualities">
+                                                <img src="./images/bluetooth.png" alt="" class="qualities__img">
+                                                <div class="qualities__text">Bluetooth</div>
+                                                <div class="qualities__desc">4.0</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <h2 class="slider__title">beats solo 3. цвет «атласное серебро»</h2>
+                                <div class="slider__text">
+                                    <p>
+                                        Беспроводные наушники Beats Solo3 готовы к работе в любой момент. Включите их и поднесите к
+                                        своему iPhone — они мгновенно подключатся к нему.
+                                    </p>
+                                </div>
+                                <div class="slider__cells">
+                                    <div class="slider__cell">
+                                        <div class="slider__cell--text">Зарядка <span class="slider__cell--marker">2 часа</span></div>
+                                    </div>
+                                    <div class="slider__cell">
+                                        <div class="slider__cell--text">Вес <span class="slider__cell--marker">215 грамм</span></div>
+                                    </div>
+                                </div>
+                                <div class="slider__cells">
+                                    <div class="slider__cell">
+                                        <div class="slider__cell--price">14 990 ₽</div>
+                                    </div>
+                                    <div class="slider__cell">
+                                        <a href="" class="btn btn--theme--red">Заказать</a>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="section reviews-section">
                 <div class="container">
                     <h2 class="section__title reviews-section__title">Отзывы</h2>
@@ -194,11 +264,11 @@
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="form__title">Имя</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="name" class="form__input">
                                 </label>
                                 <label class="form__block">
                                     <div class="form__title">Телефон</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="phone" class="form__input">
                                 </label>
                             </div>
                             <div class="form__row">
@@ -230,7 +300,7 @@
                             <div class="form__row form__row-comment">
                                 <label class="form__block form__block-comment">
                                     <div class="form__title form__title--textarea">Комментарий</div>
-                                    <textarea class="form__input form__input--textarea"></textarea>
+                                    <textarea class="form__input form__input--textarea" name="comment"></textarea>
                                 </label>
                             </div>
                             <div class="form__controls form__controls-radio">
@@ -278,28 +348,28 @@
                             <li class="socials__item social">
                                 <a href="#" class="socials__link">
                                     <svg class="social__icon vk-icon">
-                                        <use xlink:href="./CSS/components/sprite.svg#vk"></use>
+                                        <use xlink:href="/CSS/components/sprite.svg#vk"></use>
                                     </svg>
                                 </a>
                             </li>
                             <li class="socials__item social">
                                 <a href="#" class="socials__link">
                                     <svg class="social__icon fb-icon">
-                                        <use xlink:href="./CSS/components/sprite.svg#fb"></use>
+                                        <use xlink:href="/CSS/components/sprite.svg#fb"></use>
                                     </svg>
                                 </a>
                             </li>
                             <li class="socials__item social">
                                 <a href="#" class="socials__link">
                                     <svg class="social__icon in-icon">
-                                        <use xlink:href="./CSS/components/sprite.svg#in"></use>
+                                        <use xlink:href="/CSS/components/sprite.svg#in"></use>
                                     </svg>
                                 </a>
                             </li>
                             <li class="socials__item social">
                                 <a href="#" class="socials__link">
                                     <svg class="social__icon tg-icon">
-                                        <use xlink:href="./CSS/components/sprite.svg#tg"></use>
+                                        <use xlink:href="/CSS/components/sprite.svg#tg"></use>
                                     </svg>
                                 </a>
                             </li>
@@ -341,7 +411,7 @@
             </ul>
         </nav>
     </div>
-
+    <script defer src="./js/script.js"></script>
 </body>
 
 </html>
