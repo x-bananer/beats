@@ -1,0 +1,85 @@
+.menu {
+    margin: 0 1.875rem;
+    padding-top: 0.3125rem;
+    @include tablets {
+       display: none; 
+    }
+
+    &--opened{
+        @include tablets{
+            display: block;
+        }
+        position: fixed;
+        background-color: #313131;;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        color: white;
+        margin: 0;
+        & .menu__list {
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+
+        & ~ .menu__close {
+            display: block;
+            background: url("/images/close.png") center center no-repeat;
+            width: 1.25rem;
+            height: 1.25rem;
+            z-index: 4;
+        }
+
+
+    }
+}
+
+.menu--opened {
+    z-index: 3;
+}
+
+.menu__close {
+    display: none;
+}
+.menu__list {
+    display: flex;
+    align-items: center;
+    font-family: Alegreya Sans;
+    font-size: 1.125rem;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @include tablets { 
+        font-size: 2.25rem;
+        font-family: Play;
+        font-weight: normal;
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+
+    
+}
+
+.menu__item {
+    margin-right: 1.8125rem;
+    margin-bottom: 0.625rem;
+    &:last-child {
+        margin-right: 0;
+    }
+
+    @include tablets {
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+
+    @include phones {
+        margin-bottom: 0;
+        margin-right: 0;
+    }
+}
+
+.menu__link {
+    text-decoration: none;
+}

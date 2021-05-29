@@ -1,0 +1,10 @@
+.social__icon {
+    fill: #B3B3B3;
+    width: 1.875rem;
+    height: 1.875rem;
+    
+    &:hover {
+        fill: #000;
+        transition: 0.3s;
+    }
+}

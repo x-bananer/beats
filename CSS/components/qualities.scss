@@ -1,0 +1,26 @@
+.qualities {
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 1.75rem;
+    margin-left: 0;
+}
+
+.qualities:last-child {
+    margin-bottom: 0;
+}
+
+.qualities__img {
+    display: inline-block;
+}
+
+.qualities__text {
+    display: inline-block;
+    margin-left: 1.25rem;
+}
+
+.qualities__desc {
+    display: inline-block;
+    margin-left: auto;
+}

@@ -1,0 +1,31 @@
+.modal {
+    display: none;
+
+    &.fancybox-content {
+        padding: 0 !important;
+    }
+
+    .fancybox-button {
+        display: none;
+    }
+}
+
+.modal__container {
+    background: #FFF;
+    padding: 2.1875rem 3.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal__content {
+    margin-bottom: 1.875rem;
+    color: #000;
+    font-size: 1.125rem;
+    font-family: Play;
+    text-align: center;
+}
+
+.error-modal {
+    color: #E01F3D;
+}

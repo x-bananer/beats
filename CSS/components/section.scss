@@ -1,0 +1,17 @@
+.section {
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section__title {
+    font-family: Play;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 3.75rem;
+    font-weight: bold;
+    text-align: center;
+}
+

@@ -1,0 +1,133 @@
+.team {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablets {
+        padding: 0 10%;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.team__arrow {
+    position: absolute;
+left: 0%;
+right: 0%;
+top: 0%;
+bottom: -125%;
+width: 0.5625rem;
+height: 0.5625rem;
+}
+
+.team--version--desktop {
+    @include tablets {
+      display: none;
+    }
+}
+
+.team--version--desktop .team__content {
+    position: absolute;
+    top: 100%;
+}
+
+.team__content {
+    overflow: hidden;
+    transition: height .3s;
+    height: 0;
+}
+
+.team__content-block {
+    padding-bottom: 0.3125rem;
+}
+
+.team__title {
+    font-family: Play;
+    font-size: 1.125rem;
+    font-weight: bold;
+    color: #292929;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+
+    @include tablets {
+        font-family: Alegreya Sans;
+    }
+}
+
+button.team__title:after {
+    content: "";
+    display: block;
+    margin-left: 0.3125rem;
+    background: url("/images/arrow-down.png") no-repeat;
+    width: 9px;
+    height: 9px;
+    transition: .3s;
+}
+
+.team__item.active .team__title:after {
+    transform: rotate(180deg);
+}
+
+.team__title:last-child {
+    margin-bottom: 0;
+}
+
+.team__content-block--title {
+    font-family: Play;
+    font-weight: normal;
+    font-size: 1rem;
+    color: #292929;
+    margin-bottom: 0.625rem;
+
+    @include tablets {
+        font-weight: bold;
+    }
+}
+
+.team__content-block--desc {
+    color: #666;
+    font-family: Play;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+.team--version--mobile {
+    display: none;
+    @include tablets {
+        display: flex;
+      }
+}
+
+.team--version--mobile .team__item {
+    margin-bottom: 0.625rem;
+}
+
+.team__item {
+    flex: 1;
+    text-align: center;
+    margin-right: 1.25rem;
+    max-width: 14.44444rem;
+    position: relative;
+
+    @include tablets {
+        flex: initial;
+        margin-bottom: 2.1875rem;
+        margin-right: 0;
+    }
+}
+
+.team__item:last-child {
+    margin-bottom: 0;
+}
+
+.team__member {
+    margin-bottom: 1.25rem;
+
+    @include tablets {
+        margin-bottom: 0.9375rem;
+    }
+}
+
+
+

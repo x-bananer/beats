@@ -1,0 +1,134 @@
+.reviews-section {
+    position: relative;
+
+    &:before {
+        content: url("/images/ellipse.png");
+        position: absolute;
+        bottom: -1.25rem;
+        left: 14.385rem;
+    }
+
+}
+
+.reviews-section__title {
+    margin-bottom: 1.875rem;
+}
+
+.reviews__display {
+    background: #F8FAF9;
+    padding: 2.625rem;
+    padding-left: 4.25rem;
+    padding-right: 11rem;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 0.625rem;
+
+    @include tablets {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+
+    &:before {
+        content: "";
+        display: block;
+        width: 5.1875rem;
+        height: 5.1875rem;
+        background: #FFF;
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: -3.625rem;
+    }
+}
+
+.reviews__display-inner {
+    display: flex;
+
+    @include tablets {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.reviews__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.reviews__item.active {
+    position: static;
+    opacity: 1;
+    pointer-events: unset;
+}
+
+.reviews__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.reviews__avatar {
+    width: 15.8125rem;
+    height: 16.5rem;
+
+    @include tablets {
+        width: 8.6rem;
+        height: 8.6rem;
+    }
+}
+
+.reviews__avatar-img {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.reviews__content {
+    flex: 1;
+    margin-left: 2.375rem;
+}
+
+.reviews__title {
+    font-family: Play;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.3125rem;;
+    padding-top: 1.25rem;
+}
+
+.reviews__text {
+    color: #666;
+    margin-bottom: 0.625rem;
+    line-height: 1.1875rem;
+}
+
+.reviews__author {
+    font-weight: bold;
+    font-size: 1.125rem;
+}
+
+.reviews__switcher {
+    display: flex;
+    justify-content: center;
+}
+
+.reviews__switcher-item:hover {
+    border: 0.25rem solid #E01F3D;
+}
+
+.reviews__switcher {
+
+    .active {
+        border: 0.25rem solid #E01F3D;
+    }
+
+}
+
+

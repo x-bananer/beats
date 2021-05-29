@@ -1,0 +1,23 @@
+.contacts {
+    font-style: normal;
+    font-size: 1.125rem;
+    font-family: Play;
+    color: #292929;
+
+    @include phones {
+        margin-bottom: 0.625rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+.contacts__place {
+
+    font-size: 1.125rem;
+
+    @include tablets {
+        font-size: 1,.3125rem;
+    }
+}

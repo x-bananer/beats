@@ -1,0 +1,168 @@
+.slider-section {
+    background: #F8FAF9;
+    position: relative;
+}
+
+.slider {
+    position: relative;
+
+    .bx-wrapper {
+        border: 0;
+        background: transparent;
+        box-shadow: none;
+    }
+}
+
+.slider__control-arrow {
+    display: block;
+    width: 0.84375rem;
+    height: 2.53125rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+@media screen and (max-width: 768px) {
+    .slider__control-arrow {
+        top: 30%;
+    }
+}
+
+.slider__control-arrow_prev {
+    left: -2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .slider__control-arrow_prev {
+        left: 3rem;
+    }
+}
+
+.slider__control-arrow_next {
+    right: -2rem;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+@media screen and (max-width: 768px) {
+    .slider__control-arrow_next {
+        right: 3rem;
+    }
+}
+
+.slider__display {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .slider__display {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.slider__content {
+    max-width: 26.25rem;
+}
+
+@media screen and (max-width: 768px) {
+    .slider__content {
+        max-width: 91%;
+    }
+}
+
+.slider__avatar {
+    margin-right: 7.0625rem;
+
+    @include tablets {
+        margin-bottom: 3.12rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .slider__avatar {
+        width: 19.125rem;
+        height: 19.125rem;
+        margin-right: 0;
+    }
+}
+
+.slider__title {
+    font-family: Play;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.25rem;
+    text-transform: uppercase;
+    color: #292929;
+    line-height: 1.1;
+}
+
+@media screen and (max-width: 768px) {
+    .slider__title {
+        font-size: 1.75rem;
+    }
+}
+
+.slider__text {
+    font-family: Play;
+    color: #666666;
+    max-width: 90%;
+    line-height: 1.2;
+    margin-bottom: 1.375rem;
+}
+
+.slider__cell--marker {
+    font-weight: bold;
+    font-size: 1.125rem;
+    color: #000000;
+    font-family: Play;
+}
+
+.slider__cell--price {
+    font-size: 2.25rem;
+    color: #151515;
+    font-family: Play;
+}
+
+.slider__cell {
+    display: flex;
+    justify-content: space-between;
+    max-width: 31.25rem;
+}
+
+.slider__cell:last-child {
+    margin-right: 0;
+}
+
+.slider__cell--text {
+    max-width: 5.625rem;
+    margin-right: 5.625rem;
+}
+
+.slider__cells {
+    display: flex;
+    margin-bottom: 1.5625rem;
+}
+
+@media screen and (max-width: 768px) {
+    .slider__cells {
+        justify-content: center;
+    }
+}
+
+.slider__cell--price {
+    margin-right: 1.125rem;
+}
+
+.slider__item {
+    display: flex;
+    align-items: center;
+
+    @include tablets {
+        flex-direction: column;
+    }
+}

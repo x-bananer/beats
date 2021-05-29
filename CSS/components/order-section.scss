@@ -1,0 +1,16 @@
+.order-section {
+    background:  #181818 url("/images/order-section.png") center top 70% no-repeat;
+}
+
+.order-section__title {
+    color: #FFF;
+    font-family: Play;
+    margin-bottom: 3.125rem;
+
+    @include tablets {
+        margin-bottom: 2.125rem;
+    }
+}
+
+
+

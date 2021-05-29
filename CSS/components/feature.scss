@@ -1,0 +1,15 @@
+.feature {
+    display: flex;
+}
+
+.feature__icon {
+    width: 2.5625rem;
+    height: 2.5625rem;
+    margin-right: 0.4375rem;
+}
+
+.feature__text {
+    font-family: Play;
+    font-size: 1rem;
+    max-width: 7.125rem;
+}
