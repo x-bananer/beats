@@ -1,0 +1,51 @@
+$containerWidth: 990px;
+$baseFontSize: 16px;
+
+$z-fixed-menu: 100;
+
+//breakpoints 
+
+$pretablets: 1100px;
+$tablets: 768px;
+$phones: 480px;
+$mini-phones: 320px;
+
+@import "components/media";
+
+//normalize
+@import "normalize";
+
+//setups
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans&family=Play:wght@400;700&display=swap');
+@import "layout";
+
+//components
+@import "components/hero";
+@import "components/header";
+@import "components/menu";
+@import "components/features";
+@import "components/feature";
+@import "components/btn";
+@import "components/section";
+@import "components/headline";
+@import "components/interactive-avatar";
+@import "components/order-section";
+@import "components/form";
+@import "components/radio";
+@import "components/fixed-menu";
+@import "components/hamburger";
+@import "components/footer";
+@import "components/contacts";
+@import "components/map";
+@import "components/social";
+@import "components/socials";
+@import "components/dropdown";
+@import "components/slider";
+@import "components/qualities";
+@import "components/benefit";
+@import "components/benefits-section";
+@import "components/reviews";
+@import "components/benefits";
+@import "components/team";
+@import "components/modal";
+@import "components/colors"
