@@ -4,7 +4,8 @@ const init = () => {
     myMap = new ymaps.Map("map", {
         center: [55.752240, 37.576469],
         zoom: 13,
-        controls: []
+        controls: [],
+        
     });
 
     const coords = [
@@ -16,8 +17,8 @@ const init = () => {
 
     const myCollection = new ymaps.GeoObjectCollection({}, {
         draggable: false,
-        iconLayout: 'default#Image',
-        iconImageHref: "./images/marker.png"
+        iconLayout: 'default#image',
+        iconImageHref: "./images/marker.png",
         iconImageSize: [46, 57],
         iconImageOffset: [-35, -52]
     });
