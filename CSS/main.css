@@ -465,7 +465,7 @@ img {
   margin-bottom: 2.4375rem;
 }
 .hero:after {
-  content: url("/images/rectangle.png");
+  content: url("./../images/rectangle.png");
   position: absolute;
   bottom: -1.3125rem;
   right: 8.75rem;
@@ -477,7 +477,7 @@ img {
   justify-content: space-between;
   height: 100%;
   padding: 1.5rem 0 3.8125rem;
-  background: url("/images/headphones.png") right 13% center/50% auto no-repeat;
+  background: url("./../images/headphones.png") right 13% center/50% auto no-repeat;
 }
 @media screen and (max-width: 768px) {
   .hero__container {
@@ -499,7 +499,7 @@ img {
     text-align: center;
   }
   .hero__title-section:before {
-    content: url("/images/headphones-tablets.png");
+    content: url("./../images/headphones-tablets.png");
   }
 }
 @media screen and (max-width: 768px) and (max-width: 320px) {
@@ -612,7 +612,7 @@ img {
 }
 .menu--opened ~ .menu__close {
   display: block;
-  background: url("/images/close.png") center center no-repeat;
+  background: url("./../images/close.png") center center no-repeat;
   width: 1.25rem;
   height: 1.25rem;
   z-index: 4;
@@ -810,7 +810,7 @@ img {
 }
 
 .order-section {
-  background: #181818 url("/images/order-section.png") center top 70% no-repeat;
+  background: #181818 url("./../images/order-section.png") center top 70% no-repeat;
 }
 
 .order-section__title {
@@ -952,7 +952,7 @@ img {
   border-radius: 4px;
 }
 .radio--checkbox .radio__visible:before {
-  background: url("/images/check.png") center center no-repeat;
+  background: url("./../images/check.png") center center no-repeat;
 }
 
 .radio__elem {
@@ -1122,7 +1122,7 @@ img {
 }
 
 .map-section {
-  background: url("/images/map.png") bottom no-repeat;
+  background: url("./../images/map.png") bottom no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -1465,7 +1465,7 @@ img {
   margin-bottom: -2.45rem;
 }
 .benefits-section:before {
-  content: url("/images/triangle.png");
+  content: url("./../images/triangle.png");
   position: absolute;
   bottom: -3.0625rem;
   left: 10.375rem;
@@ -1488,7 +1488,7 @@ img {
   position: relative;
 }
 .reviews-section:before {
-  content: url("/images/ellipse.png");
+  content: url("./../images/ellipse.png");
   position: absolute;
   bottom: -1.25rem;
   left: 14.385rem;
@@ -1633,7 +1633,7 @@ img {
   }
 }
 .benefits__item:before {
-  content: url("/images/separator.png");
+  content: url("./../images/separator.png");
   position: absolute;
   top: 1.875rem;
   right: 0;
@@ -1828,7 +1828,7 @@ button.team__title:after {
 }
 
 .s-color {
-  background: url("/images/colors.png");
+  background: url("./../images/colors.png");
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -1933,7 +1933,7 @@ button.team__title:after {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url("../../images/splash.png") center center/cover no-repeat;
+  background: url("./../images/splash.png") center center/cover no-repeat;
   cursor: pointer;
 }
 
@@ -1951,7 +1951,7 @@ button.team__title:after {
 }
 
 .player__start {
-  background: url("../../images/play.png");
+  background: url("./../images/play.png");
   position: absolute;
   bottom: 10px;
   left: 15px;
@@ -1961,5 +1961,5 @@ button.team__title:after {
 }
 
 .paused {
-  background: url("../../images/ellipse.png");
+  background: url("./../images/ellipse.png");
 }
