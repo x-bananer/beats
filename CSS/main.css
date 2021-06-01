@@ -390,7 +390,7 @@ body {
 
 .container {
   max-width: 990px;
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
   position: relative;
 }
@@ -1053,8 +1053,14 @@ img {
   transform: translate(-50%, -50%);
 }
 
-.fixed-menu__link--shadowed:before {
-  background: #e1e1e1;
+.fixed-menu__link--shadowed .fixed-menu__item .fixed-menu__link:before {
+  background: #d9d7d7;
+}
+.fixed-menu__link--shadowed .fixed-menu__item--active .fixed-menu__link {
+  border-color: #820d1f;
+}
+.fixed-menu__link--shadowed .fixed-menu__item--active .fixed-menu__link:before {
+  background: #820d1f;
 }
 
 .hamburger {
@@ -1217,7 +1223,7 @@ img {
 .slider__control-arrow {
   display: block;
   width: 0.84375rem;
-  height: 2.53125rem;
+  height: 2rem;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -1246,6 +1252,15 @@ img {
 @media screen and (max-width: 768px) {
   .slider__control-arrow_next {
     right: 3rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .slider__control-arrow_next {
+    right: 1rem;
+  }
+
+  .slider__control-arrow_prev {
+    left: 1rem;
   }
 }
 .slider__display {
@@ -1722,9 +1737,9 @@ button.team__title:after {
   content: "";
   display: block;
   margin-left: 0.3125rem;
-  background: url("/images/arrow-down.png") no-repeat;
-  width: 9px;
-  height: 9px;
+  background: url("./../images/arrow-down.png") no-repeat;
+  width: 0.5625rem;
+  height: 0.5625rem;
   transition: 0.3s;
 }
 
@@ -1833,7 +1848,7 @@ button.team__title:after {
   background-size: cover;
   height: 100vh;
   width: 100%;
-  padding-top: 115px;
+  padding-top: 7.1875rem;
   position: relative;
   background-position: right;
 }
@@ -1841,7 +1856,7 @@ button.team__title:after {
 .s-color__title {
   font-family: Play;
   font-weight: bold;
-  font-size: 48px;
+  font-size: 3rem;
   text-transform: uppercase;
   color: #FFFFFF;
   margin: 0;
@@ -1882,13 +1897,13 @@ button.team__title:after {
 }
 .cm-item__header {
   display: block;
-  padding: 30px 34px;
+  padding: 1.875rem 2.125rem;
   writing-mode: vertical-lr;
   -webkit-text-orientation: mixed;
           text-orientation: mixed;
   transform: rotate(180deg);
   margin: 0px;
-  padding: 23x;
+  padding: 1.4375rem;
 }
 .cm-item__header, .cm-item__header:focus, .cm-item__header:visited {
   text-decoration: none;
@@ -1902,22 +1917,26 @@ button.team__title:after {
 .cm-item__title {
   font-family: Alegreya Sans;
   font-weight: bold;
-  font-size: 36px;
+  font-size: 2.25rem;
   margin: 0;
   padding: 0px;
 }
 .cm-item__content {
-  max-width: 524px;
+  max-width: 32.75rem;
   display: none;
-  padding: 31px 53px 31px 38px;
+  padding: 1.9375rem 3.3125rem 1.9375rem 2.375rem;
   background: rgba(51, 53, 55, 0.9);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   font-family: Alegreya Sans;
   font-style: normal;
   font-weight: normal;
-  font-size: 16px;
+  font-size: 1rem;
   color: #fff;
+}
+
+.player-section__title {
+  font-size: 3rem;
 }
 
 .player {
@@ -1926,40 +1945,188 @@ button.team__title:after {
   width: 100%;
   height: 100%;
 }
+.player.active .player__splash-img {
+  display: none;
+}
+.player.active .player__play-icon {
+  display: none;
+}
+.player.active .player__playpause-icon {
+  opacity: 0.5;
+}
 
+@media screen and (max-width: 768px) {
+  .player__elem {
+    width: 100%;
+    height: auto;
+  }
+}
 .player__splash {
+  display: flex;
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: url("./../images/splash.png") center center/cover no-repeat;
-  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .player__splash {
+    width: 100%;
+    height: auto;
+  }
+}
+.player-section__wrapper {
+  padding: 0 10.25rem 0 10.25rem;
+}
+
+@media screen and (max-width: 480px) {
+  .player-section__wrapper {
+    padding: 0 0 0 0;
+  }
+}
+.player__play-icon {
+  opacity: 0.6;
+}
+
+.player .paused .player__play-icon {
+  visibility: hidden;
+}
+
+.player .paused .player__playpause-icon {
+  fill-opacity: 0.3;
 }
 
 .player__controls {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 35px;
-  background: #151515;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 25px;
+  background: #151515;
+  height: 2.1875rem;
+  padding: 0 1rem;
 }
 
-.player__start {
-  background: url("./../images/play.png");
+@media screen and (max-width: 768px) {
+  .player__controls {
+    padding: 0 2.375rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .player__controls {
+    padding: 0 1.4375rem;
+  }
+}
+.player__playpause {
+  display: flex;
+  align-items: center;
+  height: 2.1875rem;
+  width: 2.25rem;
+  cursor: pointer;
+}
+
+.player__playpause-icon {
+  width: 0.6875rem;
+  height: 1rem;
+}
+
+.player__play {
+  cursor: pointer;
   position: absolute;
-  bottom: 10px;
-  left: 15px;
-  right: 0;
-  width: 11px;
-  height: 16px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.paused {
-  background: url("./../images/ellipse.png");
+.player__play-icon {
+  width: 3rem;
+  height: 4.375rem;
+}
+
+.player__progress {
+  display: flex;
+  height: 0.25rem;
+  background: #333333;
+  flex: 1;
+  cursor: pointer;
+}
+
+.player__total {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: #333333;
+}
+
+.player__current {
+  display: flex;
+  height: 100%;
+  position: relative;
+}
+
+.player__current::before {
+  content: "";
+  height: 0.6875rem;
+  width: 0.6875rem;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  right: 0;
+  display: block;
+  background-color: #E01F3D;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.player__volume-progress {
+  display: flex;
+  height: 0.25rem;
+  min-width: 3.625rem;
+  margin-left: 0.4375rem;
+  background: #333333;
+  flex: 1;
+  cursor: pointer;
+}
+
+.player__volume-current {
+  display: flex;
+  height: 100%;
+  position: relative;
+}
+
+.player__volume-current::before {
+  content: "";
+  height: 0.6875rem;
+  width: 0.6875rem;
+  border-radius: 50%;
+  display: flex;
+  background-color: #E01F3D;
+  position: absolute;
+  top: 0;
+  transform: translate(0, -35%);
+  left: 100%;
+}
+
+.player__volume {
+  display: flex;
+  align-items: center;
+  margin-left: 2.375rem;
+}
+
+@media screen and (max-width: 768px) {
+  .player__volume {
+    display: none;
+  }
+}
+.player__volume-control {
+  width: 0.75rem;
+  height: 1rem;
+}
+
+.player img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .player__splash-img {
+    width: 100%;
+    height: auto;
+  }
 }
