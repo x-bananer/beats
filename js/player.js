@@ -2,27 +2,84 @@ let player;
 const playerContainer = $('.player');
 
 let eventsInit = () => {
-    $(".player__start").click(e => {
+    $(".player__playpause-icon").click(e => {
         e.preventDefault();
 
-        if (playerContainer.hasClass('paused')) {
-            playerContainer.removeClass("paused");
+        if (playerContainer.hasClass("paused")) {
+            
             player.pauseVideo();
         } else {
-            playerContainer.addClass("paused");
+            
             player.playVideo();
         }
     });
+
+    $(".player__progress").click(e => {
+        const bar = $(e.currentTarget);
+        const clickedPosition = e.originalEvent.layerX;
+        const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
+        const newPlaybackPositionSec = (player.getDuration() / 100) * newButtonPositionPercent;
+
+        $(".player__current").css({
+            left: `${newButtonPositionPercent}%`
+        });
+
+        player.seekTo(newPlaybackPositionSec);
+    });
+
+    $(".player__play-icon").click(e => {
+        player.playVideo();
+    });
 };
+
+const onPlayerReady = () => {
+    let interval;
+    const durationSec = player.getDuration();
+
+    if (typeof interval != "undefined") {
+        clearInterval(interval);
+    }
+
+    interval = setInterval(() => {
+        const completedSec = player.getCurrentTime();
+        const completedPercent = (completedSec / durationSec) * 100;
+        $(".player__current").css({
+            left: `${completedPercent}%`
+        });
+    });
+};
+
+const onPlayerStateChange = event => {
+    /*
+    -1 (воспроизведение видео не начато)
+    0 (воспроизведение видео завершено)
+    1 (воспроизведение)
+    2 (пауза)
+    3 (буферизация)
+    5 (фидео подают реплики)
+    */
+    
+    switch (event.data) {
+        case 1:
+            playerContainer.addClass('active');
+            playerContainer.addClass("paused");
+            break;
+        
+        case 2: 
+            playerContainer.removeClass('active');
+            playerContainer.removeClass("paused");
+            break;
+    }
+}
 
 function onYouTubeIframeAPIReady() {
     player = new YT.Player("yt-player", {
-        height: "405",
+        height: "392",
         width: "660",
-        videoId: 'M7lc1UVf-VE',
+        videoId: "1_f3RcyYdfA",
         events: {
-        //'onReady': onPlayerReady,
-        // 'onStateChange': onPlayerStateChange
+            onReady: onPlayerReady,
+            onStateChange: onPlayerStateChange
         },
         playerVars: {
             controls: 0,
@@ -34,5 +91,6 @@ function onYouTubeIframeAPIReady() {
         }
     });
 }
+
 
 eventsInit();

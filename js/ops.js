@@ -12,32 +12,31 @@ const performTransition = sectionEq => {
 
         const currentSection = sections.eq(sectionEq);
         const menuTheme = currentSection.attr("data-sidemenu-theme");
-        const sideMenu = $(".fixed-menu__link");
+        const sideMenu = $(".fixed-menu__list");
 
         if (menuTheme === "light") {
             sideMenu.addClass("fixed-menu__link--shadowed");
         } else {
             sideMenu.removeClass("fixed-menu__link--shadowed");
-        }
+        };
 
         display.css({
             transform: `translateY(${position}%)`
         });
 
-        sections.eq(sectionEq).addClass("active").siblings().removeClass("active");
-
-
-
-        setTimeout(() => {
-            inScroll = false;
-            sideMenu
+        sideMenu
                 .find(".fixed-menu__item")
                 .eq(sectionEq)
                 .addClass("fixed-menu__item--active")
                 .siblings()
-                .removeClass("fixed-menu__item--active"); ``
+                .removeClass("fixed-menu__item--active");
+
+        sections.eq(sectionEq).addClass("active").siblings().removeClass("active");
+
+        setTimeout(() => {
+            inScroll = false;          
         }, 1300);
-    }
+    };
 };
 
 const scrollViewport = direction => {
