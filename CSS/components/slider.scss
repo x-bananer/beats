@@ -16,7 +16,7 @@
 .slider__control-arrow {
     display: block;
     width: 0.84375rem;
-    height: 2.53125rem;
+    height: 2rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -47,6 +47,16 @@
 @media screen and (max-width: 768px) {
     .slider__control-arrow_next {
         right: 3rem;
+    }
+}
+
+@include phones {
+    .slider__control-arrow_next {
+        right: 1rem;
+    }
+
+    .slider__control-arrow_prev {
+        left: 1rem;
     }
 }
 
@@ -126,6 +136,9 @@
     font-size: 2.25rem;
     color: #151515;
     font-family: Play;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    display: inline-block;
 }
 
 .slider__cell {

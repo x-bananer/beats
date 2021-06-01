@@ -4,17 +4,21 @@
     background-size: cover;
     height: 100vh;
     width: 100%;
-    padding-top: 115px;
+    padding-top: 7.1875rem;
     position: relative;
+    background-position: right;
 }
 
 .s-color__title {
     font-family: Play;
     font-weight: bold;
-    font-size: 48px;
+    font-size: 3rem;
     text-transform: uppercase;
     color: #FFFFFF;
     margin: 0;
+    position: absolute;
+    top: 5%;
+    left: 5%;
 }
 
 .color-menu {
@@ -63,12 +67,12 @@
 
     &__header {
         display: block;
-        padding: 30px 34px;
+        padding: 1.875rem 2.125rem;
         writing-mode: vertical-lr;
         text-orientation: mixed;
         transform: rotate(180deg);
         margin: 0px;
-        padding: 23x;
+        padding: 1.4375rem;
 
         &,
         &:focus,
@@ -88,22 +92,22 @@
     &__title {
         font-family: Alegreya Sans;
         font-weight: bold;
-        font-size: 36px;
+        font-size: 2.25rem;
         margin: 0;
         padding: 0px;
 
     }
 
     &__content {
-        max-width: 524px;
+        max-width: 32.75rem;
         display: none;
-        padding: 31px 53px 31px 38px;
+        padding: 1.9375rem 3.3125rem 1.9375rem 2.375rem;
         background: rgba(51, 53, 55, 0.9);
         backdrop-filter: blur(10px);
         font-family: Alegreya Sans;
         font-style: normal;
         font-weight: normal;
-        font-size: 16px;
+        font-size: 1rem;
         color: #fff;
     }
 }
