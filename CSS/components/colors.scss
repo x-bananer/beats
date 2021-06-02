@@ -19,6 +19,28 @@
     position: absolute;
     top: 5%;
     left: 5%;
+
+    @include tablets {
+        display: none;
+    }
+
+}
+
+.s-color__title-tablets {
+    font-family: Play;
+    font-weight: bold;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin: 0;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    display: none;
+
+    @include tablets {
+        display: block;
+    }
 }
 
 .color-menu {
@@ -96,6 +118,9 @@
         margin: 0;
         padding: 0px;
 
+        @include phones {
+            font-size: 1.6rem;
+        }
     }
 
     &__content {

@@ -1,5 +1,19 @@
+.player-section {
+position: relative;
+
+&:before {
+    content: url("../../images/polygon.png");
+    position: absolute;
+    bottom: -2.25rem;
+    left: 57.385rem;
+}
+}
+
 .player-section__title {
     font-size: 3rem;
+    margin-bottom: 2.2rem;
+
+    
 }
 
 .player {

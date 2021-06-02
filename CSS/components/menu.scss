@@ -83,3 +83,22 @@
 .menu__link {
     text-decoration: none;
 }
+
+.menu__link:hover {
+    text-decoration: underline;
+}
+
+.menu__link-color-screen {
+    
+    @include tablets {
+        display: none;
+    }
+}
+
+.menu__link-color-phones {
+    display: none;
+    text-decoration: none;
+    @include tablets {
+        display: inline;
+    }
+}

@@ -6,9 +6,16 @@
 
     &:after {
         content: url("/images/rectangle.png");
+        content: "";
         position: absolute;
-        bottom: -1.3125rem;
-        right: 8.75rem;
+        display: block;
+        height: 42px;
+        width: 10px;
+        background-color: #999;
+        bottom: -18px;
+        right: 14.2%;
+        transform: rotateZ(45deg);
+        z-index: 1;
     }
 
 }
@@ -40,7 +47,7 @@
 
         &:before {
             content: url("/images/headphones-tablets.png");
-            
+
 
             @include mini-phones {
                 margin-bottom: 0;
@@ -84,8 +91,3 @@
         margin-bottom: 1.9rem;
     }
 }
-
-
-
-
-
