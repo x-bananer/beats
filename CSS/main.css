@@ -465,10 +465,17 @@ img {
   margin-bottom: 2.4375rem;
 }
 .hero:after {
-  content: url("./../images/rectangle.png");
+  content: url("../../images/rectangle.png");
+  content: "";
   position: absolute;
-  bottom: -1.3125rem;
-  right: 8.75rem;
+  display: block;
+  height: 42px;
+  width: 10px;
+  background-color: #999;
+  bottom: -18px;
+  right: 14.2%;
+  transform: rotateZ(45deg);
+  z-index: 1;
 }
 
 .hero__container {
@@ -477,7 +484,7 @@ img {
   justify-content: space-between;
   height: 100%;
   padding: 1.5rem 0 3.8125rem;
-  background: url("./../images/headphones.png") right 13% center/50% auto no-repeat;
+  background: url("../../images/headphones.png") right 13% center/50% auto no-repeat;
 }
 @media screen and (max-width: 768px) {
   .hero__container {
@@ -499,7 +506,7 @@ img {
     text-align: center;
   }
   .hero__title-section:before {
-    content: url("./../images/headphones-tablets.png");
+    content: url("../../images/headphones-tablets.png");
   }
 }
 @media screen and (max-width: 768px) and (max-width: 320px) {
@@ -612,7 +619,7 @@ img {
 }
 .menu--opened ~ .menu__close {
   display: block;
-  background: url("./../images/close.png") center center no-repeat;
+  background: url("../../images/close.png") center center no-repeat;
   width: 1.25rem;
   height: 1.25rem;
   z-index: 4;
@@ -667,6 +674,26 @@ img {
 
 .menu__link {
   text-decoration: none;
+}
+
+.menu__link:hover {
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .menu__link-color-screen {
+    display: none;
+  }
+}
+
+.menu__link-color-phones {
+  display: none;
+  text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  .menu__link-color-phones {
+    display: inline;
+  }
 }
 
 .features {
@@ -733,7 +760,7 @@ img {
 }
 
 .section {
-  height: 100vh;
+  height: 100%;
   min-height: 600px;
   display: flex;
   flex-direction: column;
@@ -810,7 +837,7 @@ img {
 }
 
 .order-section {
-  background: #181818 url("./../images/order-section.png") center top 70% no-repeat;
+  background: #181818 url("../../images/order-section.png") center top 70% no-repeat;
 }
 
 .order-section__title {
@@ -952,7 +979,7 @@ img {
   border-radius: 4px;
 }
 .radio--checkbox .radio__visible:before {
-  background: url("./../images/check.png") center center no-repeat;
+  background: url("../../images/check.png") center center no-repeat;
 }
 
 .radio__elem {
@@ -1128,7 +1155,7 @@ img {
 }
 
 .map-section {
-  background: url("./../images/map.png") bottom no-repeat;
+  background: url("../../images/map.png") bottom no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -1209,6 +1236,14 @@ img {
 .slider-section {
   background: #F8FAF9;
   position: relative;
+}
+
+.slider-section:after {
+  content: url(../../images/cube.png);
+  position: absolute;
+  bottom: -2rem;
+  right: 24.5%;
+  z-index: 1;
 }
 
 .slider {
@@ -1480,11 +1515,11 @@ img {
   margin-bottom: -2.45rem;
 }
 .benefits-section:before {
-  content: url("./../images/triangle.png");
+  content: url("../../images/triangle.png");
   position: absolute;
-  bottom: -3.0625rem;
-  left: 10.375rem;
-  z-index: 3;
+  bottom: 1.25rem;
+  left: 7%;
+  z-index: 1;
 }
 @media screen and (max-width: 768px) {
   .benefits-section:before {
@@ -1494,7 +1529,7 @@ img {
 }
 @media screen and (max-width: 480px) {
   .benefits-section:before {
-    bottom: 3.9rem;
+    bottom: 0.9rem;
     left: 2.8rem;
   }
 }
@@ -1503,10 +1538,10 @@ img {
   position: relative;
 }
 .reviews-section:before {
-  content: url("./../images/ellipse.png");
+  content: url("../../images/ellipse.png");
   position: absolute;
   bottom: -1.25rem;
-  left: 14.385rem;
+  left: 6.385rem;
 }
 
 .reviews-section__title {
@@ -1648,7 +1683,7 @@ img {
   }
 }
 .benefits__item:before {
-  content: url("./../images/separator.png");
+  content: url("../../images/separator.png");
   position: absolute;
   top: 1.875rem;
   right: 0;
@@ -1737,7 +1772,7 @@ button.team__title:after {
   content: "";
   display: block;
   margin-left: 0.3125rem;
-  background: url("./../images/arrow-down.png") no-repeat;
+  background: url("../../images/arrow-down.png") no-repeat;
   width: 0.5625rem;
   height: 0.5625rem;
   transition: 0.3s;
@@ -1843,7 +1878,7 @@ button.team__title:after {
 }
 
 .s-color {
-  background: url("./../images/colors.png");
+  background: url("../../images/colors.png");
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -1863,6 +1898,29 @@ button.team__title:after {
   position: absolute;
   top: 5%;
   left: 5%;
+}
+@media screen and (max-width: 768px) {
+  .s-color__title {
+    display: none;
+  }
+}
+
+.s-color__title-tablets {
+  font-family: Play;
+  font-weight: bold;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin: 0;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .s-color__title-tablets {
+    display: block;
+  }
 }
 
 .color-menu {
@@ -1921,6 +1979,11 @@ button.team__title:after {
   margin: 0;
   padding: 0px;
 }
+@media screen and (max-width: 480px) {
+  .cm-item__title {
+    font-size: 1.6rem;
+  }
+}
 .cm-item__content {
   max-width: 32.75rem;
   display: none;
@@ -1935,8 +1998,19 @@ button.team__title:after {
   color: #fff;
 }
 
+.player-section {
+  position: relative;
+}
+.player-section:before {
+  content: url("../../images/polygon.png");
+  position: absolute;
+  bottom: -2.25rem;
+  left: 57.385rem;
+}
+
 .player-section__title {
   font-size: 3rem;
+  margin-bottom: 2.2rem;
 }
 
 .player {
