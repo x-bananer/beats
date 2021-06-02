@@ -93,3 +93,16 @@ $("[data-scroll-to]").click(e => {
 
     performTransition(reqSection.index());
 });
+
+//https://github.com/mattbryson/TouchSwipe-Jquery-Plugin
+$("body").swipe({
+    swipe: function (event, direction) {
+        const scroller = ViewportScroller();
+        let scrollDirection = "";
+
+        if (direction === "up") scrollDirection = "next";
+        if (direction === "down") scrollDirection = "prev";
+
+        scroller[scrollDirection]();
+    },
+  });

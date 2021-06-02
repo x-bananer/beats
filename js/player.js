@@ -87,10 +87,9 @@ function onYouTubeIframeAPIReady() {
             showinfo: 0,
             rel: 0,
             autoplay: 0,
-            modestbranding: 0
+            modestbranding: 1
         }
     });
-}
-
+};
 
 eventsInit();
