@@ -1,4 +1,5 @@
 let player;
+const playerDuration = document.querySelector('#player__duration');
 const playerContainer = $('.player');
 
 let eventsInit = () => {
@@ -14,18 +15,19 @@ let eventsInit = () => {
         }
     });
 
-    $(".player__progress").click(e => {
-        const bar = $(e.currentTarget);
-        const clickedPosition = e.originalEvent.layerX;
-        const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
-        const newPlaybackPositionSec = (player.getDuration() / 100) * newButtonPositionPercent;
+    // playerDuration.addEventListener('click', e => {
+    //     console.log(e.target.value)
+    //     // const bar = $(e.currentTarget);
+    //     // const clickedPosition = e.originalEvent.layerX;
+    //     // const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
+    //     // const newPlaybackPositionSec = (player.getDuration() / 100) * newButtonPositionPercent;
 
-        $(".player__current").css({
-            left: `${newButtonPositionPercent}%`
-        });
+    //     // $(".player__current").css({
+    //     //     left: `${newButtonPositionPercent}%`
+    //     // });
 
-        player.seekTo(newPlaybackPositionSec);
-    });
+    //     player.seekTo(e.target.value);
+    // });
 
     $(".player__play-icon").click(e => {
         player.playVideo();
@@ -35,17 +37,18 @@ let eventsInit = () => {
 const onPlayerReady = () => {
     let interval;
     const durationSec = player.getDuration();
-
+    playerDuration.max = player.getDuration()
     if (typeof interval != "undefined") {
         clearInterval(interval);
     }
 
     interval = setInterval(() => {
         const completedSec = player.getCurrentTime();
-        const completedPercent = (completedSec / durationSec) * 100;
-        $(".player__current").css({
-            left: `${completedPercent}%`
-        });
+        // playerDuration.value = completedSec;
+        // const completedPercent = (completedSec / durationSec) * 100;
+        // $(".player__current").css({
+        //     left: `${completedPercent}%`
+        // });
     });
 };
 
@@ -75,8 +78,8 @@ const onPlayerStateChange = event => {
 function onYouTubeIframeAPIReady() {
     player = new YT.Player("yt-player", {
         height: "392",
-        width: "660",
-        videoId: "1_f3RcyYdfA",
+        width: "100%",
+        videoId: "1SwugwFuSOM",
         events: {
             onReady: onPlayerReady,
             onStateChange: onPlayerStateChange
