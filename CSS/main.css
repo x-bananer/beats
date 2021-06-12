@@ -466,7 +466,7 @@ img {
   margin-bottom: 2.4375rem;
 }
 .hero:after {
-  content: url("/images/rectangle.png");
+  content: url("./../images/rectangle.png");
   content: "";
   position: absolute;
   display: block;
@@ -485,7 +485,7 @@ img {
   justify-content: space-between;
   height: 100%;
   padding: 1.5rem 0 3.8125rem;
-  background: url("/images/headphones.png") right 13% center/50% auto no-repeat;
+  background: url("./../images/headphones.png") right 13% center/50% auto no-repeat;
 }
 @media screen and (max-width: 768px) {
   .hero__container {
@@ -507,7 +507,7 @@ img {
     text-align: center;
   }
   .hero__title-section:before {
-    content: url("/images/headphones-tablets.png");
+    content: url("./../images/headphones-tablets.png");
   }
 }
 @media screen and (max-width: 768px) and (max-width: 320px) {
@@ -620,7 +620,7 @@ img {
 }
 .menu--opened ~ .menu__close {
   display: block;
-  background: url("/images/close.png") center center no-repeat;
+  background: url("./../images/close.png") center center no-repeat;
   width: 1.25rem;
   height: 1.25rem;
   z-index: 4;
@@ -838,7 +838,7 @@ img {
 }
 
 .order-section {
-  background: #181818 url("/images/order-section.png") center top 70% no-repeat;
+  background: #181818 url("./../images/order-section.png") center top 70% no-repeat;
 }
 
 .order-section__title {
@@ -980,7 +980,7 @@ img {
   border-radius: 4px;
 }
 .radio--checkbox .radio__visible:before {
-  background: url("/images/check.png") center center no-repeat;
+  background: url("./../images/check.png") center center no-repeat;
 }
 
 .radio__elem {
@@ -1156,7 +1156,7 @@ img {
 }
 
 .map-section {
-  background: url("/images/map.png") bottom no-repeat;
+  background: url("./../images/map.png") bottom no-repeat;
   background-size: cover;
   position: relative;
 }
@@ -1240,7 +1240,7 @@ img {
 }
 
 .slider-section:after {
-  content: url(../../images/cube.png);
+  content: url(./..images/cube.png);
   position: absolute;
   bottom: -2rem;
   right: 24.5%;
@@ -1516,7 +1516,7 @@ img {
   margin-bottom: -2.45rem;
 }
 .benefits-section:before {
-  content: url("/images/triangle.png");
+  content: url("./../images/triangle.png");
   position: absolute;
   bottom: 1.25rem;
   left: 7%;
@@ -1539,7 +1539,7 @@ img {
   position: relative;
 }
 .reviews-section:before {
-  content: url("/images/ellipse.png");
+  content: url("./../images/ellipse.png");
   position: absolute;
   bottom: -1.25rem;
   left: 6.385rem;
@@ -1684,7 +1684,7 @@ img {
   }
 }
 .benefits__item:before {
-  content: url("/images/separator.png");
+  content: url("./../images/separator.png");
   position: absolute;
   top: 1.875rem;
   right: 0;
@@ -1773,7 +1773,7 @@ button.team__title:after {
   content: "";
   display: block;
   margin-left: 0.3125rem;
-  background: url("/images/arrow-down.png") no-repeat;
+  background: url("./../images/arrow-down.png") no-repeat;
   width: 0.5625rem;
   height: 0.5625rem;
   transition: 0.3s;
@@ -1879,7 +1879,7 @@ button.team__title:after {
 }
 
 .s-color {
-  background: url("/images/colors.png");
+  background: url("./../images/colors.png");
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -2003,7 +2003,7 @@ button.team__title:after {
   position: relative;
 }
 .player-section:before {
-  content: url("../../images/polygon.png");
+  content: url("./../images/polygon.png");
   position: absolute;
   bottom: -2.25rem;
   left: 57.385rem;
