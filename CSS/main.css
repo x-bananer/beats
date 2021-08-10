@@ -2024,6 +2024,7 @@ button.team__title:after {
 
 #player__duration {
   -webkit-tap-highlight-color: transparent;
+  displaye: none;
 }
 
 .player__wrap {
