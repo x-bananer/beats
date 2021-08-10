@@ -1239,14 +1239,6 @@ img {
   position: relative;
 }
 
-.slider-section:after {
-  content: url(./..images/cube.png);
-  position: absolute;
-  bottom: -2rem;
-  right: 24.5%;
-  z-index: 1;
-}
-
 .slider {
   position: relative;
 }
