@@ -15,19 +15,19 @@ let eventsInit = () => {
         }
     });
 
-    // playerDuration.addEventListener('click', e => {
-    //     console.log(e.target.value)
-    //     // const bar = $(e.currentTarget);
-    //     // const clickedPosition = e.originalEvent.layerX;
-    //     // const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
-    //     // const newPlaybackPositionSec = (player.getDuration() / 100) * newButtonPositionPercent;
+    playerDuration.addEventListener('click', e => {
+        console.log(e.target.value)
+        const bar = $(e.currentTarget);
+        const clickedPosition = e.originalEvent.layerX;
+        const newButtonPositionPercent = (clickedPosition / bar.width()) * 100;
+        const newPlaybackPositionSec = (player.getDuration() / 100) * newButtonPositionPercent;
 
-    //     // $(".player__current").css({
-    //     //     left: `${newButtonPositionPercent}%`
-    //     // });
+        $(".player__current").css({
+            left: `${newButtonPositionPercent}%`
+        });
 
-    //     player.seekTo(e.target.value);
-    // });
+        player.seekTo(e.target.value);
+    });
 
     $(".player__play-icon").click(e => {
         player.playVideo();
@@ -44,11 +44,11 @@ const onPlayerReady = () => {
 
     interval = setInterval(() => {
         const completedSec = player.getCurrentTime();
-        // playerDuration.value = completedSec;
-        // const completedPercent = (completedSec / durationSec) * 100;
-        // $(".player__current").css({
-        //     left: `${completedPercent}%`
-        // });
+        playerDuration.value = completedSec;
+        const completedPercent = (completedSec / durationSec) * 100;
+        $(".player__current").css({
+            left: `${completedPercent}%`
+        });
     });
 };
 
